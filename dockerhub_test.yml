@@ -13,7 +13,7 @@ spec:
         run: dockerhub-deploy
     spec:
       containers:
-      - name: dockerhub_test-container
+      - name: dockerhub-test-container
         image: shubhu1912/dockerhub_test:03
         ports:
         - containerPort: 8000
