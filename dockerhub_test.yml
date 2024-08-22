@@ -1,19 +1,19 @@
 apiVersion: apps/v1
-        kind: Deployment
-        metadata:
-            name: dockerhub-deploy-2
-        spec:
-            replicas: 2
-            selector:
-                matchLabels:
-                    run: dockerhub-deploy
-            template:
-                metadata:
-                    labels:
-                        run: dockerhub-deploy
-            spec:
-                containers:
-                    - name: dockerhub_test-container
-                        image: shubhu1912/dockerhub_test:03
-                        ports:
-                            - containerPort: 8000
+kind: Deployment
+metadata:
+  name: dockerhub-deploy-2
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      run: dockerhub-deploy
+  template:
+    metadata:
+      labels:
+        run: dockerhub-deploy
+    spec:
+      containers:
+      - name: dockerhub_test-container
+        image: shubhu1912/dockerhub_test:03
+        ports:
+        - containerPort: 8000
